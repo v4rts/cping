@@ -1,6 +1,6 @@
 FROM centos:7
 ENV container docker
-RUN yum -y install gcc git gcc-c++
+RUN yum -y install gcc git gcc-c++ tcpdump vim
 RUN gcc --version
 RUN mkdir /cping
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \

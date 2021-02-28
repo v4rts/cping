@@ -1,6 +1,6 @@
 FROM centos:7
 ENV container docker
-RUN yum -y install gcc git
+RUN yum -y install gcc git gcc-c++
 RUN gcc --version
 RUN git clone https://github.com/shokerplz/cping.git
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \

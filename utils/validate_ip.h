@@ -1,0 +1,1 @@
+bool validateIP(char *ip);

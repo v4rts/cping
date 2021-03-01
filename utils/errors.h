@@ -13,6 +13,7 @@ const int RCV_FAILED      = 201;
 /* Main errors */
 const int NO_ADDR      = 211;
 const int ARGS_NOT_VALID  = 212;
+const int IP_NOT_VALID  = 213;
 const int UNKNOWN_ERROR   = 255;
 /* End */
 #endif

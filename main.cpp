@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include "utils/utils.h"
 #include <arpa/inet.h>
+#include "utils/validate_ip.h"
 int main (int argc, char *argv[]) {
         bool is_dnsname = false; // Boolean for check if dns name promted or ip address
         bool valid_args = true; // Boolean for check if args are valid
@@ -27,6 +28,12 @@ int main (int argc, char *argv[]) {
         // is_dnsname = check_arg();
         if (is_dnsname) {
                 he = gethostbyname(argv[1]);
+        }
+        if (validateIP(argv[1])) {
+                printf("%s\n", "IP address is valid. Continuing");
+        } else {
+                printf("%s\n", "IP address is invalid. Program will exit now");
+                exit(IP_NOT_VALID);
         }
         dst_addr = inet_addr(argv[1]);
         sockfd = create_socket();

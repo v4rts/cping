@@ -4,9 +4,9 @@ linux 7 cping
 1. git clone https://github.com/shokerplz/cping.git; cd cping;
 2. docker build -t c7-cping .; docker run -it --mount type=bind,source="$(pwd)",target=/cping c7-cping bash;<br/>
    OR<br/>
-   docker run -it --mount type=bind,source="$(pwd)",target=/cping c7-cping sh -c "g++ -std=c++11 main.cpp utils/*.cpp && ./a.out"<br/>
+   docker run -it --mount type=bind,source="$(pwd)",target=/cping c7-cping sh -c "/opt/rh/devtoolset-7/root/usr/bin/g++ -std=c++11 main.cpp utils/*.cpp && ./a.out"<br/>
    And skip part 3
-3. g++ -std=c++11 main.cpp utils/*.cpp
+3. /opt/rh/devtoolset-7/root/usr/bin/g++ -std=c++11 main.cpp utils/*.cpp
 
 ## TODO
 1. Validation (WIP)
